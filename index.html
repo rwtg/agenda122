@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPlanner - Organize sua Vida Escolar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EduPlanner</h1>
+            <p>Organize sua vida escolar e diminua a pressão dos estudos</p>
+        </header>
+
+    
+        <div id="loginPage" class="page active">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="E-mail" required>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <button type="button" id="loginBtn">Entrar</button>
+                <div id="loginMessage" class="error-message"></div>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+        </div>
+
+     
+        <div id="registerPage" class="page">
+            <h2>Cadastro</h2>
+            <form id="registerForm">
+                <input type="text" id="registerName" placeholder="Nome completo" required>
+                <input type="email" id="registerEmail" placeholder="E-mail" required>
+                <input type="password" id="registerPassword" placeholder="Senha" required>
+                <button type="button" id="registerBtn">Cadastrar</button>
+                <div id="registerMessage" class="error-message"></div>
+            </form>
+            <p>Já tem uma conta? <a href="#" id="showLogin">Faça login</a></p>
+        </div>
+
+       
+        <div id="tasksPage" class="page">
+            <h2>Minhas Tarefas</h2>
+            
+            <div class="task-form">
+                <h3>Adicionar Nova Tarefa</h3>
+                <input type="text" id="taskTitle" placeholder="Título da atividade, trabalho, ou apresentação...">
+                <textarea id="taskDescription" placeholder="Descrição (opcional)" rows="3"></textarea>
+                <button type="button" id="addTaskBtn">Cadastrar Tarefa</button>
+            </div>
+
+        
+            <div class="task-list">
+                <h3>Pendentes (<span id="pendingCount">0</span>)</h3>
+                <div id="pendingTasks">
+                    <div class="empty-message">Nenhuma tarefa pendente. Mãos à obra!</div>
+                </div>
+            </div>
+
+           
+            <div class="task-list">
+                <h3>Concluídas (<span id="completedCount">0</span>)</h3>
+                <div id="completedTasks">
+                    <div class="empty-message">Nenhuma tarefa concluída ainda. Comece a marcar!</div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="secondary-btn" id="logoutBtn">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
